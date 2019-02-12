@@ -226,7 +226,7 @@ func createTmpDirs() (string, string, string, string, string, error) {
 func compileIncludedApp(appName string) (string, error) {
 	appPath := path.Join(
 		os.Getenv("GOPATH"),
-		fmt.Sprintf("%s", appName),
+		fmt.Sprintf("src/github.com/cloudfoundry/uptimer/%s", appName),
 	)
 
 	buildCmd := exec.Command("go", "build")
